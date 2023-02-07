@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.char {
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.health {
+    font-size: 2rem;
+}
