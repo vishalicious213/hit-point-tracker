@@ -10,13 +10,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 15rem;
 }
+
+.name {
+    color: gold;
+}
+
 .health {
     font-size: 2rem;
 }
 
 .char-buttons {
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
+    display: flex;
+    justify-content: space-between;
+    width: 7rem;
     margin: 1rem 0 0;
 }
 
