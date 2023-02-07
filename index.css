@@ -14,3 +14,21 @@ body {
 .health {
     font-size: 2rem;
 }
+
+.char-buttons {
+    outline: 1px solid orange;
+    margin: 1rem 0 0;
+}
+
+.health-button {
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: green;
+}
+
+.sub-button {
+    background-color: red;
+}
