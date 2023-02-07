@@ -14,6 +14,8 @@ body {
 #characters {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 .char-container {
@@ -148,4 +150,13 @@ body {
     bottom: 0;
     right: 0;
     padding: .5rem
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 672px) {
+    /* NAV */
+    #characters {
+        justify-content: start;
+    }
 }
