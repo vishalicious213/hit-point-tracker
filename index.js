@@ -1,10 +1,17 @@
 const characters = document.getElementById("characters")
+const formToggle = document.getElementById("form-toggle")
+const formContainer = document.getElementById("form-container")
 const newCharForm = document.getElementById("add-char-form")
 const newNameBtn = document.getElementById("add-name")
 const newCurHpBtn = document.getElementById("add-current-hp")
 const newMaxHpBtn = document.getElementById("add-max-hp")
 
 // ⬇️ USER INTERFACE ⬇️
+
+formToggle.addEventListener("click", function() {
+    // formContainer.style.display = "flex"
+    formContainer.classList.toggle("flex")
+})
 
 // render a new character to the roster
 newCharForm.addEventListener("submit", function(e) {
