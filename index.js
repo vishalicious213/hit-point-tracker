@@ -45,7 +45,7 @@ newCharForm.addEventListener("submit", function(e) {
     newMaxHpBtn.value = ""
 })
 
-// listen for clicks on + - and 'remove' buttons
+// listen for clicks on the + - and 'remove' buttons
 document.addEventListener("click", function(e) {
     if (e.target.dataset.addhp) {
         handleAddHp(e.target.dataset.addhp)
@@ -56,17 +56,14 @@ document.addEventListener("click", function(e) {
     }
 })
 
-
+// listen for hovering on the + - and 'remove' buttons
 document.addEventListener("mouseover", function(e) {
     if (e.target.dataset.addhp) {
-        console.log(e.target.dataset.addhp)
-        const addHover = document.querySelector(`[data-name="${e.target.dataset.addhp}"]`)
-        addHover.classList.add("char-hover")
-        // handleAddHp(e.target.dataset.addhp)
+        handleHover(e.target.dataset.addhp)
     } else if (e.target.dataset.subhp) {
-        // handleSubHp(e.target.dataset.subhp)
+        handleHover(e.target.dataset.subhp)
     } else if (e.target.dataset.remove) {
-        // handleRemove(e.target.dataset.remove)
+        handleHover(e.target.dataset.remove)
     }
 })
 
@@ -106,6 +103,12 @@ function handleRemove(char) {
     const removalIndex = charactersArray.indexOf(charToRemove)
     charactersArray.splice(removalIndex, 1)
     renderCharacters(charactersArray)
+}
+
+// highlight the character's border
+function handleHover(char) {
+    const addHover = document.querySelector(`[data-name="${char}"]`)
+    addHover.classList.add("char-hover")
 }
 
 // ⬇️ RENDER THE APP ⬇️
