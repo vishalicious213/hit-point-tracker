@@ -16,15 +16,15 @@ addCharForm.addEventListener("submit", function(e) {
 function addNewCharacter(newChar) {
     console.log(newChar)
     characters.innerHTML += `
-    <div class="char">
-        <h2 class="name">Character name</h2>
-        <div class="health">
-            <div><span class="current-hp">100</span> / <span class="total-hp">100</span></div>
+        <div class="char">
+            <h2 class="name">${newChar.name}</h2>
+            <div class="health">
+                <div><span class="current-hp">100</span> / <span class="total-hp">${newChar.maxHp}</span></div>
+            </div>
+            <div class="char-buttons">
+                <button class="health-button add-button" type="button">+</button>
+                <button class="health-button sub-button" type="button">-</button>
+            </div>
         </div>
-        <div class="char-buttons">
-            <button class="health-button add-button" type="button">+</button>
-            <button class="health-button sub-button" type="button">-</button>
-        </div>
-    </div>
     `
 }
