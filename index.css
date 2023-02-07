@@ -49,6 +49,21 @@ body {
     background-color: red;
 }
 
+.remove {
+    width: 90%;
+    margin-top: 1rem;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: .25rem;
+}
+
+.remove:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white;
+    border: 1px solid white;
+}
+
 /* ADD CHARACTER FORM */
 
 #form-container {

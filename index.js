@@ -100,6 +100,7 @@ function renderCharacters(newChars) {
                     <button data-subhp="${char.name}" class="health-button sub-button" type="button">-</button>
                     <button data-addhp="${char.name}" class="health-button add-button" type="button">+</button>
                 </div>
+                <button class="remove" type="button">remove</button>
             </div>
         `
     })
