@@ -35,17 +35,22 @@ document.addEventListener("click", function(e) {
 // ⬇️ EVENT HANDLERS ⬇️
 
 function handleAddHp(addhp) {
-    console.log("Add HP", addhp)
+    // console.log("Add HP", addhp)
     const addToThisHp = document.querySelector(`[data-curhp="${addhp}-curHp"]`)
-    console.log(addToThisHp.textContent)
-    const curHp = parseInt(addToThisHp.textContent) + 1
+    const maxHp = parseInt(document.querySelector(`[data-maxhp="${addhp}-maxHp"]`).textContent)
+    // console.log(addToThisHp.textContent)
+    console.log(maxHp)
+    let curHp = parseInt(addToThisHp.textContent) + 1
+    if (curHp > maxHp) {
+        curHp = maxHp
+    }
     addToThisHp.textContent = curHp
 }
 
 function handleSubHp(subhp) {
-    console.log("Sub HP")
+    // console.log("Sub HP")
     const subFromThisHp = document.querySelector(`[data-curhp="${subhp}-curHp"]`)
-    console.log(subFromThisHp.textContent)
+    // console.log(subFromThisHp.textContent)
     const curHp = parseInt(subFromThisHp.textContent) - 1
     subFromThisHp.textContent = curHp
 }
