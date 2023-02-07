@@ -5,6 +5,11 @@ body {
     color: white;
 }
 
+#characters {
+    display: flex;
+    justify-content: space-around;
+}
+
 .char {
     outline: 1px solid red;
     display: flex;

@@ -1,13 +1,20 @@
 const characters = document.getElementById("characters")
 const addCharForm = document.getElementById("add-char-form")
+const addNameBtn = document.getElementById("add-name")
+const addHpBtn = document.getElementById("add-max-hp")
 
 addCharForm.addEventListener("submit", function(e) {
     e.preventDefault()
-    addNewCharacter()
+    const newChar = {
+        name: addNameBtn.value,
+        maxHp: addHpBtn.value
+    }
+    addNewCharacter(newChar)
     console.log("submitted")
 })
 
 function addNewCharacter(newChar) {
+    console.log(newChar)
     characters.innerHTML += `
     <div class="char">
         <h2 class="name">Character name</h2>
