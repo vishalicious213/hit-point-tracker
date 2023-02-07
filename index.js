@@ -15,10 +15,12 @@ newCharForm.addEventListener("submit", function(e) {
         maxHp: newMaxHpBtn.value
     }
 
+    // hit points can't be less than 0
     if (newChar.curHp < 0) {
         newChar.curHp = 0
     }
 
+    // hit points can't be higher than max hp
     if (newChar.curHp > newChar.maxHp) {
         newChar.curHp = newChar.maxHp
     }

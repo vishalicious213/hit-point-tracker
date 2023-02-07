@@ -18,35 +18,42 @@
             <!-- addNewCharacter() -->
         </section>
 
-        <form id="add-char-form">
-            <input 
-                type="text" 
-                id="add-name" 
-                name="add-name"
-                placeholder="Enter name"
-                required
-            >
+        <div id="form-container">
+            <form id="add-char-form">
+                <span>Name: </span>
+                <input 
+                    type="text" 
+                    id="add-name" 
+                    name="add-name"
+                    placeholder="Enter name"
+                    required
+                >
+    
+                <div>
+                    <span>Health: </span>
+                    <input 
+                        type="number" 
+                        class="hp"
+                        id="add-current-hp" 
+                        name="add-current-hp"
+                        placeholder="Current"
+                        required
+                    > / 
+        
+                    <input 
+                        type="number" 
+                        class="hp"
+                        id="add-max-hp" 
+                        name="add-max-hp"
+                        placeholder="Maximum"
+                        required
+                    >
+        
+                </div>
+                <button type="submit">Add character</button>
+            </form>
+        </div>
 
-            <input 
-                type="number" 
-                class="hp"
-                id="add-current-hp" 
-                name="add-current-hp"
-                placeholder="Current health"
-                required
-            >
-
-            <input 
-                type="number" 
-                class="hp"
-                id="add-max-hp" 
-                name="add-max-hp"
-                placeholder="Max health"
-                required
-            >
-
-            <button type="submit">Add character</button>
-        </form>
     </main>
 
     <script src="/index.js"></script>

@@ -51,8 +51,22 @@ body {
 
 /* ADD CHARACTER FORM */
 
+#form-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #add-char-form {
     outline: 1px solid red;
+    width: 18rem;
+}
+
+#add-char-form span {
+    display: inline-block;
+    width: 4rem;
 }
 
 /* hide increment/decrement arrows */
@@ -60,4 +74,17 @@ body {
 .hp::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#add-name {
+    width: 13rem;
+}
+
+.hp {
+    width: 5.875rem;
+}
+
+#add-char-form button {
+    width: 98.75%;
+    /* margin: 0 .25rem; */
 }
