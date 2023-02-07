@@ -56,6 +56,20 @@ document.addEventListener("click", function(e) {
     }
 })
 
+
+document.addEventListener("mouseover", function(e) {
+    if (e.target.dataset.addhp) {
+        console.log(e.target.dataset.addhp)
+        const addHover = document.querySelector(`[data-name="${e.target.dataset.addhp}"]`)
+        addHover.classList.add("char-hover")
+        // handleAddHp(e.target.dataset.addhp)
+    } else if (e.target.dataset.subhp) {
+        // handleSubHp(e.target.dataset.subhp)
+    } else if (e.target.dataset.remove) {
+        // handleRemove(e.target.dataset.remove)
+    }
+})
+
 // ⬇️ EVENT HANDLERS ⬇️
 
 // increment a character's hit points
@@ -101,7 +115,7 @@ function renderCharacters(newChars) {
 
     newChars.forEach(function(char) {
         characters.innerHTML += `
-            <div class="char">
+            <div data-name="${char.name}" class="char">
                 <h2 class="name">${char.name}</h2>
                 <div class="health">
                     <div>

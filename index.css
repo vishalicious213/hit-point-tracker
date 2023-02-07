@@ -43,6 +43,10 @@ body {
     width: 10rem;
 }
 
+.char-hover {
+    border: 2px solid red;
+}
+
 .name {
     color: gold;
 }
@@ -52,7 +56,6 @@ body {
 }
 
 .char-buttons {
-    /* outline: 1px solid orange; */
     display: flex;
     justify-content: space-between;
     width: 7rem;
@@ -65,16 +68,37 @@ body {
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
+    background-image: url("/img/green.jpg");
     background-color: green;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .health-button:hover {
+    transform: scale(1.25);
+}
+
+.add-button:hover {
     color: white;
-    border: 1px solid gainsboro;
+    border: 2px solid mediumseagreen;
 }
 
 .sub-button {
+    background-image: url("/img/red.jpg");
     background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sub-button:hover {
+    color: white;
+    border: 2px solid crimson;
 }
 
 .remove {
