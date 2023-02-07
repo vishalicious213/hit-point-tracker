@@ -10,6 +10,8 @@ addCharForm.addEventListener("submit", function(e) {
         maxHp: addHpBtn.value
     }
     addNewCharacter(newChar)
+    addNameBtn.value = ""
+    addHpBtn.value = ""
     console.log("submitted")
 })
 
