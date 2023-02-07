@@ -37,7 +37,7 @@ newCharForm.addEventListener("submit", function(e) {
         newChar.curHp = newChar.maxHp
     }
 
-    addNewCharacter(newChar)
+    renderCharacters(newChar)
     newNameBtn.value = ""
     newCurHpBtn.value = ""
     newMaxHpBtn.value = ""
@@ -81,7 +81,7 @@ function handleSubHp(subhp) {
 
 // ⬇️ RENDER THE APP ⬇️
 
-function addNewCharacter(newChar) {
+function renderCharacters(newChar) {
     characters.innerHTML += `
         <div class="char">
             <h2 class="name">${newChar.name}</h2>
@@ -92,8 +92,8 @@ function addNewCharacter(newChar) {
                 </div>
             </div>
             <div class="char-buttons">
-                <button data-addhp="${newChar.name}" class="health-button add-button" type="button">+</button>
                 <button data-subhp="${newChar.name}" class="health-button sub-button" type="button">-</button>
+                <button data-addhp="${newChar.name}" class="health-button add-button" type="button">+</button>
             </div>
         </div>
     `
