@@ -6,6 +6,7 @@ const newMaxHpBtn = document.getElementById("add-max-hp")
 
 // ⬇️ USER INTERFACE ⬇️
 
+// render a new character to the roster
 newCharForm.addEventListener("submit", function(e) {
     e.preventDefault()
     const newChar = {
@@ -20,19 +21,23 @@ newCharForm.addEventListener("submit", function(e) {
     newMaxHpBtn.value = ""
 })
 
+// listen for clicks on + and - buttons, per character
 document.addEventListener("click", function(e) {
     console.log(e.target.dataset)
 
     if (e.target.dataset.addhp) {
-        handleAddHp()
+        handleAddHp(e.target.dataset.addhp)
     } else if (e.target.dataset.subhp) {
         handleSubHp()
     }
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
-function handleAddHp() {
-    console.log("Add HP")
+
+function handleAddHp(addhp) {
+    console.log("Add HP", addhp)
+    const addToThisHp = document.querySelector(`[data-curhp="${addhp}-curHp"]`)
+    console.log(addToThisHp.textContent)
 }
 
 function handleSubHp() {
@@ -47,8 +52,8 @@ function addNewCharacter(newChar) {
             <h2 class="name">${newChar.name}</h2>
             <div class="health">
                 <div>
-                    <span id="${newChar.name}-curHp" class="current-hp">${newChar.curHp}</span> / 
-                    <span id="${newChar.name}-maxHp" class="total-hp">${newChar.maxHp}</span>
+                    <span data-curhp="${newChar.name}-curHp" class="current-hp">${newChar.curHp}</span> / 
+                    <span data-maxhp="${newChar.name}-maxHp" class="total-hp">${newChar.maxHp}</span>
                 </div>
             </div>
             <div class="char-buttons">
