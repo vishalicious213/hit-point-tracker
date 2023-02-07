@@ -22,8 +22,12 @@ addCharForm.addEventListener("submit", function(e) {
 
 document.addEventListener("click", function(e) {
     console.log(e.target.dataset)
-    // let button = e.target.id
-    // let addBtn = document.getElementById(``)
+
+    if (e.target.dataset.addhp) {
+        console.log("Add HP")
+    } else if (e.target.dataset.subhp) {
+        console.log("Sub HP")
+    }
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
@@ -42,8 +46,8 @@ function addNewCharacter(newChar) {
                 </div>
             </div>
             <div class="char-buttons">
-                <button data-addHp="${newChar.name}" class="health-button add-button" type="button">+</button>
-                <button data-subHp="${newChar.name}" class="health-button sub-button" type="button">-</button>
+                <button data-addhp="${newChar.name}" class="health-button add-button" type="button">+</button>
+                <button data-subhp="${newChar.name}" class="health-button sub-button" type="button">-</button>
             </div>
         </div>
     `
