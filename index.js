@@ -51,7 +51,10 @@ function handleSubHp(subhp) {
     // console.log("Sub HP")
     const subFromThisHp = document.querySelector(`[data-curhp="${subhp}-curHp"]`)
     // console.log(subFromThisHp.textContent)
-    const curHp = parseInt(subFromThisHp.textContent) - 1
+    let curHp = parseInt(subFromThisHp.textContent) - 1
+    if (curHp < 0) {
+        curHp = 0
+    }
     subFromThisHp.textContent = curHp
 }
 
