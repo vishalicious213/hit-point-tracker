@@ -38,6 +38,8 @@ function handleAddHp(addhp) {
     console.log("Add HP", addhp)
     const addToThisHp = document.querySelector(`[data-curhp="${addhp}-curHp"]`)
     console.log(addToThisHp.textContent)
+    const curHp = parseInt(addToThisHp.textContent) + 1
+    addToThisHp.textContent = curHp
 }
 
 function handleSubHp() {
