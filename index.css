@@ -38,11 +38,16 @@ body {
 
 .health-button {
     font-size: 2rem;
-    border: none;
+    border: 1px solid black;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
     background-color: green;
+}
+
+.health-button:hover {
+    color: white;
+    border: 1px solid gainsboro;
 }
 
 .sub-button {
