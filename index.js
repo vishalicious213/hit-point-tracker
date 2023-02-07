@@ -45,8 +45,6 @@ newCharForm.addEventListener("submit", function(e) {
 
 // listen for clicks on + and - buttons, per character
 document.addEventListener("click", function(e) {
-    console.log(e.target.dataset)
-
     if (e.target.dataset.addhp) {
         handleAddHp(e.target.dataset.addhp)
     } else if (e.target.dataset.subhp) {
