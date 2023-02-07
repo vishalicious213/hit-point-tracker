@@ -9,8 +9,13 @@ const newMaxHpBtn = document.getElementById("add-max-hp")
 // ⬇️ USER INTERFACE ⬇️
 
 formToggle.addEventListener("click", function() {
-    // formContainer.style.display = "flex"
     formContainer.classList.toggle("flex")
+
+    if (formToggle.textContent === "Show controls") {
+        formToggle.textContent = "Hide controls"
+    } else {
+        formToggle.textContent = "Show controls"
+    }
 })
 
 // render a new character to the roster
