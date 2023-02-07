@@ -24,14 +24,20 @@ document.addEventListener("click", function(e) {
     console.log(e.target.dataset)
 
     if (e.target.dataset.addhp) {
-        console.log("Add HP")
+        handleAddHp()
     } else if (e.target.dataset.subhp) {
-        console.log("Sub HP")
+        handleSubHp()
     }
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
+function handleAddHp() {
+    console.log("Add HP")
+}
 
+function handleSubHp() {
+    console.log("Sub HP")
+}
 
 // ⬇️ RENDER THE APP ⬇️
 
