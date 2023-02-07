@@ -1,23 +1,23 @@
 const characters = document.getElementById("characters")
-const addCharForm = document.getElementById("add-char-form")
-const addNameBtn = document.getElementById("add-name")
-const addCurHpBtn = document.getElementById("add-current-hp")
-const addMaxHpBtn = document.getElementById("add-max-hp")
+const newCharForm = document.getElementById("add-char-form")
+const newNameBtn = document.getElementById("add-name")
+const newCurHpBtn = document.getElementById("add-current-hp")
+const newMaxHpBtn = document.getElementById("add-max-hp")
 
 // ⬇️ USER INTERFACE ⬇️
 
-addCharForm.addEventListener("submit", function(e) {
+newCharForm.addEventListener("submit", function(e) {
     e.preventDefault()
     const newChar = {
-        name: addNameBtn.value,
-        curHp: addCurHpBtn.value,
-        maxHp: addMaxHpBtn.value
+        name: newNameBtn.value,
+        curHp: newCurHpBtn.value,
+        maxHp: newMaxHpBtn.value
     }
 
     addNewCharacter(newChar)
-    addNameBtn.value = ""
-    addCurHpBtn.value = ""
-    addMaxHpBtn.value = ""
+    newNameBtn.value = ""
+    newCurHpBtn.value = ""
+    newMaxHpBtn.value = ""
 })
 
 document.addEventListener("click", function(e) {
