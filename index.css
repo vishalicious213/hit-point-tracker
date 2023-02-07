@@ -16,12 +16,29 @@ body {
     justify-content: space-around;
 }
 
+.char-container {
+    background-image: url("/img/wood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    width: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: .5rem;
+}
+
 .char {
-    outline: 1px solid red;
+    border: 2px solid brown;
+    border-radius: .5rem;
+    padding: .5rem .5rem 1rem .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 15rem;
+    width: 10rem;
 }
 
 .name {
