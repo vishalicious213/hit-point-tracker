@@ -39,8 +39,7 @@ newCharForm.addEventListener("submit", function(e) {
     }
 
     charactersArray.push(newChar)
-    console.log(charactersArray)
-    renderCharacters(newChar)
+    renderCharacters(charactersArray)
     newNameBtn.value = ""
     newCurHpBtn.value = ""
     newMaxHpBtn.value = ""
@@ -84,21 +83,26 @@ function handleSubHp(subhp) {
 
 // ⬇️ RENDER THE APP ⬇️
 
-function renderCharacters(newChar) {
-    characters.innerHTML += `
-        <div class="char">
-            <h2 class="name">${newChar.name}</h2>
-            <div class="health">
-                <div>
-                    <span data-curhp="${newChar.name}-curHp" class="current-hp">${newChar.curHp}</span> / 
-                    <span data-maxhp="${newChar.name}-maxHp" class="total-hp">${newChar.maxHp}</span>
+function renderCharacters(newChars) {
+    characters.innerHTML = ""
+
+    newChars.forEach(function(char) {
+        characters.innerHTML += `
+            <div class="char">
+                <h2 class="name">${char.name}</h2>
+                <div class="health">
+                    <div>
+                        <span data-curhp="${char.name}-curHp" class="current-hp">${char.curHp}</span> / 
+                        <span data-maxhp="${char.name}-maxHp" class="total-hp">${char.maxHp}</span>
+                    </div>
+                </div>
+                <div class="char-buttons">
+                    <button data-subhp="${char.name}" class="health-button sub-button" type="button">-</button>
+                    <button data-addhp="${char.name}" class="health-button add-button" type="button">+</button>
                 </div>
             </div>
-            <div class="char-buttons">
-                <button data-subhp="${newChar.name}" class="health-button sub-button" type="button">-</button>
-                <button data-addhp="${newChar.name}" class="health-button add-button" type="button">+</button>
-            </div>
-        </div>
-    `
+        `
+    })
+
 }
 
