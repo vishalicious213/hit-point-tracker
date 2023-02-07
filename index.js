@@ -28,7 +28,7 @@ document.addEventListener("click", function(e) {
     if (e.target.dataset.addhp) {
         handleAddHp(e.target.dataset.addhp)
     } else if (e.target.dataset.subhp) {
-        handleSubHp()
+        handleSubHp(e.target.dataset.subhp)
     }
 })
 
@@ -42,8 +42,12 @@ function handleAddHp(addhp) {
     addToThisHp.textContent = curHp
 }
 
-function handleSubHp() {
+function handleSubHp(subhp) {
     console.log("Sub HP")
+    const subFromThisHp = document.querySelector(`[data-curhp="${subhp}-curHp"]`)
+    console.log(subFromThisHp.textContent)
+    const curHp = parseInt(subFromThisHp.textContent) - 1
+    subFromThisHp.textContent = curHp
 }
 
 // ⬇️ RENDER THE APP ⬇️
