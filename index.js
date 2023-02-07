@@ -45,12 +45,14 @@ newCharForm.addEventListener("submit", function(e) {
     newMaxHpBtn.value = ""
 })
 
-// listen for clicks on + and - buttons, per character
+// listen for clicks on + - and 'remove' buttons
 document.addEventListener("click", function(e) {
     if (e.target.dataset.addhp) {
         handleAddHp(e.target.dataset.addhp)
     } else if (e.target.dataset.subhp) {
         handleSubHp(e.target.dataset.subhp)
+    } else if (e.target.dataset.remove) {
+        handleRemove(e.target.dataset.remove)
     }
 })
 
@@ -79,6 +81,17 @@ function handleSubHp(subhp) {
     }
 
     subFromThisHp.textContent = curHp
+}
+
+// remove character from roster
+function handleRemove(char) {
+    const charToRemove = charactersArray.filter(function(ch) {
+        return ch.name === char
+    })[0]
+
+    const removalIndex = charactersArray.indexOf(charToRemove)
+    charactersArray.splice(removalIndex, 1)
+    renderCharacters(charactersArray)
 }
 
 // ⬇️ RENDER THE APP ⬇️
