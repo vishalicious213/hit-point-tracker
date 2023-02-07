@@ -5,6 +5,7 @@ const newCharForm = document.getElementById("add-char-form")
 const newNameBtn = document.getElementById("add-name")
 const newCurHpBtn = document.getElementById("add-current-hp")
 const newMaxHpBtn = document.getElementById("add-max-hp")
+let charactersArray = []
 
 // ⬇️ USER INTERFACE ⬇️
 
@@ -23,8 +24,8 @@ newCharForm.addEventListener("submit", function(e) {
     e.preventDefault()
     const newChar = {
         name: newNameBtn.value,
-        curHp: newCurHpBtn.value,
-        maxHp: newMaxHpBtn.value
+        curHp: parseInt(newCurHpBtn.value),
+        maxHp: parseInt(newMaxHpBtn.value)
     }
 
     // hit points can't be less than 0
@@ -37,6 +38,8 @@ newCharForm.addEventListener("submit", function(e) {
         newChar.curHp = newChar.maxHp
     }
 
+    charactersArray.push(newChar)
+    console.log(charactersArray)
     renderCharacters(newChar)
     newNameBtn.value = ""
     newCurHpBtn.value = ""
