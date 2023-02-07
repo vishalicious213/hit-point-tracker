@@ -19,6 +19,10 @@ newCharForm.addEventListener("submit", function(e) {
         newChar.curHp = 0
     }
 
+    if (newChar.curHp > newChar.maxHp) {
+        newChar.curHp = newChar.maxHp
+    }
+
     addNewCharacter(newChar)
     newNameBtn.value = ""
     newCurHpBtn.value = ""
