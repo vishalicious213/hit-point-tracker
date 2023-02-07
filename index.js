@@ -34,27 +34,28 @@ document.addEventListener("click", function(e) {
 
 // ⬇️ EVENT HANDLERS ⬇️
 
+// increment a character's hit points
 function handleAddHp(addhp) {
-    // console.log("Add HP", addhp)
     const addToThisHp = document.querySelector(`[data-curhp="${addhp}-curHp"]`)
     const maxHp = parseInt(document.querySelector(`[data-maxhp="${addhp}-maxHp"]`).textContent)
-    // console.log(addToThisHp.textContent)
-    console.log(maxHp)
     let curHp = parseInt(addToThisHp.textContent) + 1
+
     if (curHp > maxHp) {
         curHp = maxHp
     }
+
     addToThisHp.textContent = curHp
 }
 
+// decrement a character's hit points
 function handleSubHp(subhp) {
-    // console.log("Sub HP")
     const subFromThisHp = document.querySelector(`[data-curhp="${subhp}-curHp"]`)
-    // console.log(subFromThisHp.textContent)
     let curHp = parseInt(subFromThisHp.textContent) - 1
+
     if (curHp < 0) {
         curHp = 0
     }
+
     subFromThisHp.textContent = curHp
 }
 
