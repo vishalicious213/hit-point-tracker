@@ -207,12 +207,19 @@ label {
 }
 
 input {
-    padding: .5rem .25rem;
+    padding: .75rem .5rem;
     border-radius: .25rem;
     border: none;
     outline: none;
     margin-top: .5rem;
     box-sizing: border-box;
+    font-size: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: white;
 }
 
 #add-char-form span {
@@ -220,14 +227,12 @@ input {
     width: 4rem;
 }
 
-.add-name-input {
-    width: 100%;
-    box-sizing: border-box;
-    outline: none;
-}
-
 .hp-field {
     width: 42%;
+}
+
+.hp {
+    text-align: center;
 }
 
 /* hide increment/decrement arrows */
