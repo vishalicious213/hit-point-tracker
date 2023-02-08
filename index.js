@@ -56,10 +56,12 @@ document.addEventListener("click", function(e) {
     }
 })
 
-// listen for hovering on the + - and 'remove' buttons
+// listen for hovering on the character card & buttons
 document.addEventListener("mouseover", function(e) {
     if (e.target.dataset.charcontainer) {
         handleHover(e.target.dataset.charcontainer, "div")
+    } else if (e.target.dataset.chardiv) {
+        handleHover(e.target.dataset.chardiv, "div")
     } else if (e.target.dataset.addhp) {
         handleHover(e.target.dataset.addhp, "add")
     } else if (e.target.dataset.subhp) {
@@ -69,7 +71,7 @@ document.addEventListener("mouseover", function(e) {
     }
 })
 
-// listen for hovering to stop on the + - and 'remove' buttons
+// listen for hovering to stop on the character card & buttons
 document.addEventListener("mouseout", function(e) {
     if (e.target.dataset.charcontainer) {
         handleHoverExit(e.target.dataset.charcontainer, "div")
@@ -122,31 +124,34 @@ function handleRemove(char) {
 
 // highlight the character's border on mouseover
 function handleHover(char, buttonType) {
-    const addHover = document.querySelector(`[data-chardiv="${char}"]`)
+    const charDiv = document.querySelector(`[data-chardiv="${char}"]`)
 
     if (buttonType === "div") {
-        addHover.classList.add("char-hover")
+        charDiv.classList.add("char-hover")
     } else if (buttonType === "add") {
-        addHover.classList.add("add-hover")
+        charDiv.classList.add("add-hover")
     } else if (buttonType === "sub") {
-        addHover.classList.add("sub-hover")
+        charDiv.classList.add("sub-hover")
     } else if (buttonType === "rem") {
-        addHover.classList.add("rem-hover")
+        charDiv.classList.add("rem-hover")
     }
 }
 
 // stop highlighting the character's border on mouseout
 function handleHoverExit(char, buttonType) {
-    const addHover = document.querySelector(`[data-chardiv="${char}"]`)
+    const charDiv = document.querySelector(`[data-chardiv="${char}"]`)
 
     if (buttonType === "div") {
-        addHover.classList.remove("char-hover")
+        charDiv.classList.remove("char-hover")
     } else if (buttonType === "add") {
-        addHover.classList.remove("add-hover")
+        charDiv.classList.remove("add-hover")
+        charDiv.classList.add("char-hover")
     } else if (buttonType === "sub") {
-        addHover.classList.remove("sub-hover")
+        charDiv.classList.remove("sub-hover")
+        charDiv.classList.add("char-hover")
     } else if (buttonType === "rem") {
-        addHover.classList.remove("rem-hover")
+        charDiv.classList.remove("rem-hover")
+        charDiv.classList.add("char-hover")
     }
 }
 

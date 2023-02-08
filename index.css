@@ -50,22 +50,22 @@ h1 {
 
 .char-hover {
     border: 2px solid gold;
-    transition: .15s;
+    transition: .1s;
 }
 
 .add-hover {
     border: 2px solid mediumseagreen;
-    transition: .15s;
+    transition: .1s;
 }
 
 .sub-hover {
     border: 2px solid crimson;
-    transition: .15s;
+    transition: .1s;
 }
 
 .rem-hover {
     border: 2px solid black;
-    transition: .15s;
+    transition: .1s;
 }
 
 .name {
