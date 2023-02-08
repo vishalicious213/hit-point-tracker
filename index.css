@@ -184,13 +184,13 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 1rem;
+    padding: 3rem 1rem;
     border-radius: .5rem;
 }
 
 #add-char-form {
-    width: 300px;
-    padding: 3rem 2rem;
+    width: 260px;
+    padding: 1rem;
     border: 2px solid brown;
     border-radius: .5rem;
 }
@@ -217,7 +217,7 @@ label {
 .health-fields {
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0 0
+    margin: 1.25rem 0 .5rem
 }
 
 input {
@@ -241,7 +241,7 @@ input {
 }
 
 .hp-field {
-    width: 42%;
+    width: 47%;
 }
 
 .hp {
