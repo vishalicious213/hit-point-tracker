@@ -58,7 +58,9 @@ document.addEventListener("click", function(e) {
 
 // listen for hovering on the + - and 'remove' buttons
 document.addEventListener("mouseover", function(e) {
-    if (e.target.dataset.addhp) {
+    if (e.target.dataset.charcontainer) {
+        handleHover(e.target.dataset.charcontainer, "div")
+    } else if (e.target.dataset.addhp) {
         handleHover(e.target.dataset.addhp, "add")
     } else if (e.target.dataset.subhp) {
         handleHover(e.target.dataset.subhp, "sub")
@@ -69,7 +71,9 @@ document.addEventListener("mouseover", function(e) {
 
 // listen for hovering to stop on the + - and 'remove' buttons
 document.addEventListener("mouseout", function(e) {
-    if (e.target.dataset.addhp) {
+    if (e.target.dataset.charcontainer) {
+        handleHoverExit(e.target.dataset.charcontainer, "div")
+    } else if (e.target.dataset.addhp) {
         handleHoverExit(e.target.dataset.addhp, "add")
     } else if (e.target.dataset.subhp) {
         handleHoverExit(e.target.dataset.subhp, "sub")
@@ -120,7 +124,9 @@ function handleRemove(char) {
 function handleHover(char, buttonType) {
     const addHover = document.querySelector(`[data-chardiv="${char}"]`)
 
-    if (buttonType === "add") {
+    if (buttonType === "div") {
+        addHover.classList.add("char-hover")
+    } else if (buttonType === "add") {
         addHover.classList.add("add-hover")
     } else if (buttonType === "sub") {
         addHover.classList.add("sub-hover")
@@ -133,7 +139,9 @@ function handleHover(char, buttonType) {
 function handleHoverExit(char, buttonType) {
     const addHover = document.querySelector(`[data-chardiv="${char}"]`)
 
-    if (buttonType === "add") {
+    if (buttonType === "div") {
+        addHover.classList.remove("char-hover")
+    } else if (buttonType === "add") {
         addHover.classList.remove("add-hover")
     } else if (buttonType === "sub") {
         addHover.classList.remove("sub-hover")
@@ -150,7 +158,7 @@ function renderCharacters(newChars) {
 
     newChars.forEach(function(char) {
         characters.innerHTML += `
-            <div class="char-container">
+            <div data-charcontainer="${char.name}" class="char-container">
                 <div data-chardiv="${char.name}" class="char">
                     <h2 data-name="${char.name}" class="name">${char.name}</h2>
                     <div class="health">
