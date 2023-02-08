@@ -233,7 +233,11 @@ input {
 }
 
 input::placeholder {
-    color: white;
+    color: ivory;
+}
+
+input {
+    background-color: rgba(0, 25, 0, 0.2);
 }
 
 .hp-field {
@@ -256,7 +260,7 @@ input::placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: ivory;
     font-size: 1.25rem;
     margin-top: 1rem;
     padding: .5rem 0;
@@ -275,4 +279,17 @@ input::placeholder {
     bottom: 0;
     right: 0;
     padding: .5rem
+}
+
+#form-toggle {
+    background-image: url("/img/green.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: ivory;
+    font-size: 1.25rem;
+    padding: .5rem 1rem;
+    border: 1px solid ivory;
+    border-radius: .5rem;
+    width: 12rem;
 }
