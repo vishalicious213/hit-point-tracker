@@ -186,7 +186,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-radius: .5rem;
 }
 
@@ -205,6 +205,8 @@ label {
 
 .health-fields {
     display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0
 }
 
 #add-char-form span {
@@ -212,8 +214,17 @@ label {
     width: 4rem;
 }
 
-.add-name-input, .hp {
+.add-name-input {
     width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.hp-field {
+    width: 45%;
+}
+
+.hp {
     box-sizing: border-box;
     outline: none;
 }
@@ -226,6 +237,7 @@ label {
 }
 
 #add-char-form button {
+    margin-top: 1rem;
     width: 100%;
 }
 
