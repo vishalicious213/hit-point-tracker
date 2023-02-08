@@ -92,7 +92,6 @@ function handleAddHp(addhp) {
     const hpBar = document.querySelector(`[data-hpBar="${addhp}"]`)
     const maxHp = parseInt(document.querySelector(`[data-maxhp="${addhp}-maxHp"]`).textContent)
     let curHp = parseInt(addToThisHp.textContent) + 1
-    console.log(hpBar)
 
     if (curHp > maxHp) {
         curHp = maxHp
@@ -105,6 +104,7 @@ function handleAddHp(addhp) {
 // decrement a character's hit points
 function handleSubHp(subhp) {
     const subFromThisHp = document.querySelector(`[data-curhp="${subhp}-curHp"]`)
+    const hpBar = document.querySelector(`[data-hpBar="${subhp}"]`)
     let curHp = parseInt(subFromThisHp.textContent) - 1
 
     if (curHp < 0) {
@@ -112,6 +112,7 @@ function handleSubHp(subhp) {
     }
 
     subFromThisHp.textContent = curHp
+    hpBar.value = curHp
 }
 
 // remove character from roster
