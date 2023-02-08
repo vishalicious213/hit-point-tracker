@@ -180,15 +180,25 @@ h1 {
 }
 
 #add-char-form {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     width: 300px;
     background-image: url("/img/wood.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: gold;
 }
 
 .form-field {
+    /* outline: 2px solid orange; */
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
 }
@@ -202,6 +212,12 @@ h1 {
     width: 4rem;
 }
 
+.add-name-input, .hp {
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
 /* hide increment/decrement arrows */
 .hp::-webkit-outer-spin-button,
 .hp::-webkit-inner-spin-button {
@@ -209,17 +225,8 @@ h1 {
     margin: 0;
 }
 
-#add-name {
-    width: 13rem;
-}
-
-.hp {
-    width: 5.875rem;
-}
-
 #add-char-form button {
-    width: 98.75%;
-    /* margin: 0 .25rem; */
+    width: 100%;
 }
 
 /* FORM CONTROLLER */
