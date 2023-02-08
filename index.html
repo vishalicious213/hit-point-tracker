@@ -19,46 +19,48 @@
         </section>
 
         <div id="form-container" class="no-display">
-            <form id="add-char-form">
-                <div class="form-field">
-                    <label for="add-name">Name<span class="brown">:</span></label>
-                    <input 
-                        type="text" 
-                        id="add-name" 
-                        class="add-name-input"
-                        name="add-name"
-                        placeholder="Enter name"
-                        required
-                    >
-                </div>
-
-                <div class="health-fields">
-                    <div class="form-field hp-field">
-                        <label for="add-current-hp">Current HP<span class="brown">:</span></label>
+            <div id="form-border">
+                <form id="add-char-form">
+                    <div class="form-field">
+                        <label for="add-name">Name<span class="colon">:</span></label>
                         <input 
-                            type="number" 
-                            id="add-current-hp" 
-                            class="hp"
-                            name="add-current-hp"
-                            placeholder="Current"
+                            type="text" 
+                            id="add-name" 
+                            class="add-name-input"
+                            name="add-name"
+                            placeholder="Enter name"
                             required
                         >
                     </div>
 
-                    <div class="form-field hp-field">
-                        <label for="add-max-hp">Max HP<span class="brown">:</span></label>
-                        <input 
-                            type="number" 
-                            id="add-max-hp" 
-                            class="hp"
-                            name="add-max-hp"
-                            placeholder="Maximum"
-                            required
-                        >
+                    <div class="health-fields">
+                        <div class="form-field hp-field">
+                            <label for="add-current-hp">Current HP<span class="colon">:</span></label>
+                            <input 
+                                type="number" 
+                                id="add-current-hp" 
+                                class="hp"
+                                name="add-current-hp"
+                                placeholder="Current"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field hp-field">
+                            <label for="add-max-hp">Max HP<span class="colon">:</span></label>
+                            <input 
+                                type="number" 
+                                id="add-max-hp" 
+                                class="hp"
+                                name="add-max-hp"
+                                placeholder="Maximum"
+                                required
+                            >
+                        </div>
                     </div>
-                </div>
-                <button type="submit">Add character</button>
-            </form>
+                    <button type="submit">Add character</button>
+                </form>
+            </div>
         </div>
 
         <div id="form-controller">
