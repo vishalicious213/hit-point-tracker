@@ -118,26 +118,27 @@ function handleRemove(char) {
 
 // highlight the character's border on mouseover
 function handleHover(char) {
-    const addHover = document.querySelector(`[data-name="${char}"]`)
+    const addHover = document.querySelector(`[data-chardiv="${char}"]`)
     addHover.classList.add("char-hover")
 }
 
 // stop highlighting the character's border on mouseout
 function handleHoverExit(char) {
-    const addHover = document.querySelector(`[data-name="${char}"]`)
+    const addHover = document.querySelector(`[data-chardiv="${char}"]`)
     addHover.classList.remove("char-hover")
 }
 
 // ⬇️ RENDER THE APP ⬇️
 
+// render the characters!
 function renderCharacters(newChars) {
     characters.innerHTML = ""
 
     newChars.forEach(function(char) {
         characters.innerHTML += `
             <div class="char-container">
-                <div data-name="${char.name}" class="char">
-                    <h2 class="name">${char.name}</h2>
+                <div data-chardiv="${char.name}" class="char">
+                    <h2 data-name="${char.name}" class="name">${char.name}</h2>
                     <div class="health">
                         <div>
                             <span data-curhp="${char.name}-curHp" class="current-hp">${char.curHp}</span> / 
@@ -152,7 +153,14 @@ function renderCharacters(newChars) {
                 </div>
             </div>
         `
+        adjustNameLength(char.name)
     })
-
 }
 
+// if the name is long, reduce font so it fits better
+function adjustNameLength(charName) {
+    if (charName.length > 12) {
+        const nameToShrink = document.querySelector(`[data-name="${charName}"]`)
+        nameToShrink.classList.add("name-smaller")
+    }
+}
