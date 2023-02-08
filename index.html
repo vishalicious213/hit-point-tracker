@@ -20,35 +20,41 @@
 
         <div id="form-container" class="no-display">
             <form id="add-char-form">
-                <span>Name: </span>
-                <input 
-                    type="text" 
-                    id="add-name" 
-                    name="add-name"
-                    placeholder="Enter name"
-                    required
-                >
-    
-                <div>
-                    <span>Health: </span>
+                <div class="form-field">
+                    <label for="add-name">Name:</label>
                     <input 
-                        type="number" 
-                        class="hp"
-                        id="add-current-hp" 
-                        name="add-current-hp"
-                        placeholder="Current"
-                        required
-                    > / 
-        
-                    <input 
-                        type="number" 
-                        class="hp"
-                        id="add-max-hp" 
-                        name="add-max-hp"
-                        placeholder="Maximum"
+                        type="text" 
+                        id="add-name" 
+                        name="add-name"
+                        placeholder="Enter name"
                         required
                     >
-        
+                </div>
+
+                <div class="health-fields">
+                    <div class="form-field">
+                        <label for="add-current-hp">Health: </label>
+                        <input 
+                            type="number" 
+                            class="hp"
+                            id="add-current-hp" 
+                            name="add-current-hp"
+                            placeholder="Current"
+                            required
+                        > / 
+                    </div>
+
+                    <div class="form-field">
+                        <label for="add-max-hp">Health: </label>
+                        <input 
+                            type="number" 
+                            class="hp"
+                            id="add-max-hp" 
+                            name="add-max-hp"
+                            placeholder="Maximum"
+                            required
+                        >
+                    </div>
                 </div>
                 <button type="submit">Add character</button>
             </form>
