@@ -67,6 +67,17 @@ document.addEventListener("mouseover", function(e) {
     }
 })
 
+// listen for hovering to stop on the + - and 'remove' buttons
+document.addEventListener("mouseout", function(e) {
+    if (e.target.dataset.addhp) {
+        handleHoverExit(e.target.dataset.addhp)
+    } else if (e.target.dataset.subhp) {
+        handleHoverExit(e.target.dataset.subhp)
+    } else if (e.target.dataset.remove) {
+        handleHoverExit(e.target.dataset.remove)
+    }
+})
+
 // ⬇️ EVENT HANDLERS ⬇️
 
 // increment a character's hit points
@@ -105,10 +116,16 @@ function handleRemove(char) {
     renderCharacters(charactersArray)
 }
 
-// highlight the character's border
+// highlight the character's border on mouseover
 function handleHover(char) {
     const addHover = document.querySelector(`[data-name="${char}"]`)
     addHover.classList.add("char-hover")
+}
+
+// stop highlighting the character's border on mouseout
+function handleHoverExit(char) {
+    const addHover = document.querySelector(`[data-name="${char}"]`)
+    addHover.classList.remove("char-hover")
 }
 
 // ⬇️ RENDER THE APP ⬇️
@@ -118,19 +135,21 @@ function renderCharacters(newChars) {
 
     newChars.forEach(function(char) {
         characters.innerHTML += `
-            <div data-name="${char.name}" class="char">
-                <h2 class="name">${char.name}</h2>
-                <div class="health">
-                    <div>
-                        <span data-curhp="${char.name}-curHp" class="current-hp">${char.curHp}</span> / 
-                        <span data-maxhp="${char.name}-maxHp" class="total-hp">${char.maxHp}</span>
+            <div class="char-container">
+                <div data-name="${char.name}" class="char">
+                    <h2 class="name">${char.name}</h2>
+                    <div class="health">
+                        <div>
+                            <span data-curhp="${char.name}-curHp" class="current-hp">${char.curHp}</span> / 
+                            <span data-maxhp="${char.name}-maxHp" class="total-hp">${char.maxHp}</span>
+                        </div>
                     </div>
+                    <div class="char-buttons">
+                        <button data-subhp="${char.name}" class="health-button sub-button" type="button">-</button>
+                        <button data-addhp="${char.name}" class="health-button add-button" type="button">+</button>
+                    </div>
+                    <button data-remove="${char.name}" class="remove" type="button">remove</button>
                 </div>
-                <div class="char-buttons">
-                    <button data-subhp="${char.name}" class="health-button sub-button" type="button">-</button>
-                    <button data-addhp="${char.name}" class="health-button add-button" type="button">+</button>
-                </div>
-                <button data-remove="${char.name}" class="remove" type="button">remove</button>
             </div>
         `
     })

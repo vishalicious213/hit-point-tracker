@@ -45,6 +45,7 @@ body {
 
 .char-hover {
     border: 2px solid red;
+    transition: .15s;
 }
 
 .name {
