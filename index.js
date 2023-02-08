@@ -89,14 +89,17 @@ document.addEventListener("mouseout", function(e) {
 // increment a character's hit points
 function handleAddHp(addhp) {
     const addToThisHp = document.querySelector(`[data-curhp="${addhp}-curHp"]`)
+    const hpBar = document.querySelector(`[data-hpBar="${addhp}"]`)
     const maxHp = parseInt(document.querySelector(`[data-maxhp="${addhp}-maxHp"]`).textContent)
     let curHp = parseInt(addToThisHp.textContent) + 1
+    console.log(hpBar)
 
     if (curHp > maxHp) {
         curHp = maxHp
     }
 
     addToThisHp.textContent = curHp
+    hpBar.value = curHp
 }
 
 // decrement a character's hit points
@@ -171,6 +174,7 @@ function renderCharacters(newChars) {
                             <span data-curhp="${char.name}-curHp" class="current-hp">${char.curHp}</span> / 
                             <span data-maxhp="${char.name}-maxHp" class="total-hp">${char.maxHp}</span>
                         </div>
+                        <meter data-hpbar="${char.name}" class="hp-bar" value="${char.curHp}" min="0" max="${char.maxHp}"></meter>
                     </div>
                     <div class="char-buttons">
                         <button data-subhp="${char.name}" class="health-button sub-button" type="button">-</button>

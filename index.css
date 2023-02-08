@@ -70,7 +70,6 @@ h1 {
 }
 
 .name {
-    /* outline: 1px solid red; */
     width: 100%;
     border-radius: .5rem;
     background-color: rgba(0, 0, 0, 0.15);
@@ -88,7 +87,13 @@ h1 {
 }
 
 .health {
+    width: 90%;
     font-size: 2rem;
+    text-align: center;
+}
+
+.hp-bar {
+    width: 100%;
 }
 
 .char-buttons {
