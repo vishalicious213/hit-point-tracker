@@ -185,7 +185,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     border-radius: .5rem;
 }
 
@@ -244,6 +244,10 @@ label {
     padding: .5rem 0;
     border-radius: .5rem;
     width: 100%;
+}
+
+#add-char-form button:hover {
+    transform: scale(1.1);
 }
 
 /* FORM CONTROLLER */
