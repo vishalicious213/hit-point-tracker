@@ -190,9 +190,17 @@ h1 {
 }
 
 label {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 600;
     color: gold;
+    text-shadow: 0 0 1px brown;
+    text-decoration: 1px underline gold;
+}
+
+.brown {
+    color: yellow;
+    margin: 0;
+    padding: 0;
 }
 
 .form-field {
@@ -202,7 +210,7 @@ label {
 
 .health-fields {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 1rem 0 0
 }
 
@@ -214,17 +222,12 @@ input {
     margin-top: .5rem;
     box-sizing: border-box;
     font-size: 1.25rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 25, 0, 0.2);
     color: white;
 }
 
 input::placeholder {
     color: white;
-}
-
-#add-char-form span {
-    display: inline-block;
-    width: 4rem;
 }
 
 .hp-field {
