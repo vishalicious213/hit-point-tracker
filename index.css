@@ -9,13 +9,17 @@ body {
     color: white;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* CHARACTERS ROSTER */
 
 #characters {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: .5rem;
 }
 
 .char-container {
@@ -50,8 +54,9 @@ body {
 
 .name {
     color: gold;
+    font-family: Garamond, serif;
     font-size: 1.5rem;
-    margin: 0;
+    margin: .5rem 0;
     height: 1.5rem;
 }
 
