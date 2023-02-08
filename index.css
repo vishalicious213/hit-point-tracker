@@ -38,10 +38,10 @@ h1 {
     border-radius: .5rem;
 }
 
-.char-container:hover .char {
+/* .char-container:hover .char {
     border: 2px solid red;
     transition: .15s;
-}
+} */
 
 .char {
     border: 2px solid brown;
@@ -53,8 +53,18 @@ h1 {
     width: 10rem;
 }
 
-.char-hover {
-    border: 2px solid red;
+.add-hover {
+    border: 2px solid mediumseagreen;
+    transition: .15s;
+}
+
+.sub-hover {
+    border: 2px solid crimson;
+    transition: .15s;
+}
+
+.rem-hover {
+    border: 2px solid black;
     transition: .15s;
 }
 
