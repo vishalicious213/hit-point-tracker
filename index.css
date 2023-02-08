@@ -115,6 +115,7 @@ body {
     background-color: rgba(255, 0, 0, 0.6);
     color: white;
     border: 1px solid white;
+    transform: scale(1.1);
 }
 
 /* ADD CHARACTER FORM */
