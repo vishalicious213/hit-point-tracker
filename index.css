@@ -202,8 +202,17 @@ label {
 
 .health-fields {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1rem 0 0
+}
+
+input {
+    padding: .5rem .25rem;
+    border-radius: .25rem;
+    border: none;
+    outline: none;
+    margin-top: .5rem;
+    box-sizing: border-box;
 }
 
 #add-char-form span {
@@ -218,12 +227,7 @@ label {
 }
 
 .hp-field {
-    width: 45%;
-}
-
-.hp {
-    box-sizing: border-box;
-    outline: none;
+    width: 42%;
 }
 
 /* hide increment/decrement arrows */
