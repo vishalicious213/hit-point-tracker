@@ -211,7 +211,8 @@ function loadCharacters() {
         if (e.target.dataset.saved) {
             let rosterIndex = (e.target.dataset.saved)
             let loadedRoster = JSON.parse(localStorage.getItem(localStorage.key(rosterIndex)))
-            renderCharacters(loadedRoster)
+            charactersArray = loadedRoster
+            renderCharacters(charactersArray)
         }
     })
 }
