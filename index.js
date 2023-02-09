@@ -224,8 +224,15 @@ function deleteCharacters() {
 
     for (let i = 0; i < localStorage.length; i++) {
         let saved = localStorage.key(i)
-        deleteRoster.innerHTML += `<div data-saved="${i}" class="roster-item">• ${saved}</div>`
+        deleteRoster.innerHTML += `<div data-delete="${i}" class="roster-item">• ${saved}</div>`
     }
+
+    deleteInterface.addEventListener("click", function(e) {
+        if (e.target.dataset.delete) {
+            let rosterIndex = (e.target.dataset.delete)
+            console.log(rosterIndex)
+        }
+    })
 }
 
 // ⬇️ RENDER THE APP ⬇️
