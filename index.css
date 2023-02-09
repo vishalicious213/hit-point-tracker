@@ -362,7 +362,7 @@ h1 {
     border-radius: .5rem;
 }
 
-#roster {
+#roster, #delete-roster {
     background-color: rgba(255, 0, 0, 0.2);
     border-radius: .5rem;
     padding: .25rem;

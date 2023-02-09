@@ -13,8 +13,8 @@ const loadInterface = document.getElementById("load-interface-modal")
 const deleteInterface = document.getElementById("delete-interface-modal")
 const saveInput = document.getElementById("save-input")
 const saveSubmitBtn = document.getElementById("save-submit-btn")
-// const loadSubmitBtn = document.getElementById("load-submit-btn")
 const roster = document.getElementById("roster")
+const deleteRoster = document.getElementById("delete-roster")
 let charactersArray = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -220,6 +220,12 @@ function loadCharacters() {
 // delete character roster from localStorage
 function deleteCharacters() {
     deleteInterface.classList.toggle("flex")
+    roster.innerHTML = ""
+
+    for (let i = 0; i < localStorage.length; i++) {
+        let saved = localStorage.key(i)
+        deleteRoster.innerHTML += `<div data-saved="${i}" class="roster-item">• ${saved}</div>`
+    }
 }
 
 // ⬇️ RENDER THE APP ⬇️
