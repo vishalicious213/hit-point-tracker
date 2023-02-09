@@ -192,6 +192,7 @@ function saveCharacters() {
     saveInterface.classList.toggle("flex")
     loadInterface.classList.remove("flex")
     deleteInterface.classList.remove("flex")
+    formContainer.classList.remove("flex")
 
     saveSubmitBtn.addEventListener("click", function() {
         if (charactersArray.length > 0) {
@@ -206,6 +207,7 @@ function loadCharacters() {
     loadInterface.classList.toggle("flex")
     saveInterface.classList.remove("flex")
     deleteInterface.classList.remove("flex")
+    formContainer.classList.remove("flex")
 
     roster.innerHTML = ""
 
@@ -234,6 +236,7 @@ function deleteCharacters() {
     deleteInterface.classList.toggle("flex")
     saveInterface.classList.remove("flex")
     loadInterface.classList.remove("flex")
+    formContainer.classList.remove("flex")
 
     function renderRoster() {
         deleteRoster.innerHTML = ""
