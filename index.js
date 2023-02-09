@@ -206,6 +206,10 @@ function loadCharacters() {
 
     roster.innerHTML = ""
 
+    if (!localStorage.length) {
+        roster.innerHTML += `<div>No character rosters have been saved</div>`
+    }
+
     for (let i = 0; i < localStorage.length; i++) {
         let saved = localStorage.key(i)
         roster.innerHTML += `<div data-saved="${i}" class="roster-item">• ${saved}</div>`
@@ -228,9 +232,13 @@ function deleteCharacters() {
     saveInterface.classList.remove("flex")
     loadInterface.classList.remove("flex")
 
-    
     function renderRoster() {
         deleteRoster.innerHTML = ""
+
+        if (!localStorage.length) {
+            deleteRoster.innerHTML += `<div>No character rosters have been saved</div>`
+        }
+
         for (let i = 0; i < localStorage.length; i++) {
             let saved = localStorage.key(i)
             deleteRoster.innerHTML += `<div data-delete="${saved}" class="roster-item">• ${saved}</div>`
