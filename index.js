@@ -204,7 +204,7 @@ function loadCharacters() {
         roster.innerHTML = ""
         for (let i = 0; i < localStorage.length; i++) {
             let saved = localStorage.key(i)
-            roster.innerHTML += `<div data-saved="${i}" class="roster-item">${saved}</div>`
+            roster.innerHTML += `<div data-saved="${i}" class="roster-item">- ${saved}</div>`
             // console.log(JSON.parse(localStorage.getItem(saved)))
         }
     })
