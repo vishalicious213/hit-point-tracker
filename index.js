@@ -189,6 +189,7 @@ function saveCharacters() {
     saveSubmitBtn.addEventListener("click", function() {
         if (charactersArray.length > 0) {
             localStorage.setItem(`${saveInput.value}`, JSON.stringify(charactersArray))
+            saveInterface.classList.toggle("flex")
         }
     })
 }
