@@ -213,8 +213,10 @@ function loadCharacters() {
     loadInterface.addEventListener("click", function(e) {
         if (e.target.dataset.saved) {
             let rosterIndex = (e.target.dataset.saved)
+            let loadedRoster = JSON.parse(localStorage.getItem(localStorage.key(rosterIndex)))
+            renderCharacters(loadedRoster)
             // console.log(rosterIndex)
-            console.log(JSON.parse(localStorage.getItem(localStorage.key(rosterIndex))))
+            // console.log(JSON.parse(localStorage.getItem(localStorage.key(rosterIndex))))
             // console.log(JSON.parse(localStorage.getItem(rosterIndex)))
         }
     })
