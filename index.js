@@ -8,6 +8,7 @@ const newMaxHpBtn = document.getElementById("add-max-hp")
 const saveBtn = document.getElementById("save-btn")
 const loadBtn = document.getElementById("load-btn")
 const deleteBtn = document.getElementById("delete-btn")
+const saveInterface = document.getElementById("save-interface")
 let charactersArray = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -177,6 +178,8 @@ function handleHoverExit(char, buttonType) {
 // save character roster to localStorage
 function saveCharacters() {
     console.log("Save")
+
+    saveInterface.classList.toggle("flex")
 }
 
 // load character roster from localStorage
