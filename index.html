@@ -66,10 +66,9 @@
         </div>
 
         <div id="save-interface-modal" class="no-display">
-            <div class="save-interface-border">
-                <div class="save-interface-form">
+            <div class="interface-border">
+                <div class="interface-form">
                     <h2>Save this roster of characters</h2>
-                    <!-- <label for="save-path">Enter a name for this roster of characters</label> -->
                     <input 
                         type="text" 
                         id="save-input" 
@@ -87,7 +86,26 @@
             </div>
         </div>
 
-        <div id="load-interface-modal" class="no-display">Load Interface</div>
+        <div id="load-interface-modal" class="no-display">
+            <div class="interface-border">
+                <div class="interface-form">
+                    <h2>Load a roster of characters</h2>
+                    <input 
+                        type="text" 
+                        id="load-input" 
+                        class=""
+                        name="load-input"
+                        placeholder="Name this save file"
+                        required
+                    >
+                    <button id="load-submit-btn" type="button">
+                        <div>
+                            <i class="fa-solid fa-folder-open"></i> Load
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <div id="delete-interface-modal" class="no-display">Delete Interface</div>
 

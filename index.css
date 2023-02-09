@@ -328,7 +328,7 @@ h1 {
 
 /* SAVE-BUTTONS INTERFACES */
 
-#save-interface-modal {
+#save-interface-modal, #load-interface-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -340,11 +340,11 @@ h1 {
     background-color: rgba(255, 0, 0, 0.2);
 }
 
-#save-interface-modal h2 {
+.interface-form h2 {
     font-size: 1.25rem;
 }
 
-.save-interface-border {
+.interface-border {
     background-image: url("/img/wood.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -353,7 +353,7 @@ h1 {
     border-radius: .5rem;
 }
 
-.save-interface-form {
+.interface-form {
     width: 260px;
     padding: 1rem;
     border: 2px solid brown;
