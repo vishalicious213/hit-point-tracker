@@ -68,9 +68,9 @@ document.addEventListener("click", function(e) {
     } else if (e.target.dataset.remove) {
         handleRemove(e.target.dataset.remove)
     } else if (e.target.dataset.moveleft) {
-        console.log("move left")
+        handleMove(e.target.dataset.moveleft, "left")
     } else if (e.target.dataset.moveright) {
-        console.log("move right")
+        handleMove(e.target.dataset.moveright, "right")
     }
 })
 
@@ -157,6 +157,11 @@ function handleRemove(char) {
     const removalIndex = charactersArray.indexOf(charToRemove)
     charactersArray.splice(removalIndex, 1)
     renderCharacters(charactersArray)
+}
+
+// move the character to the right/left in roster
+function handleMove(char, direction) {
+    console.log(char, direction)
 }
 
 // highlight the character's border on mouseover
