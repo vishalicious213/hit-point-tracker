@@ -224,7 +224,7 @@ function deleteCharacters() {
 
     for (let i = 0; i < localStorage.length; i++) {
         let saved = localStorage.key(i)
-        deleteRoster.innerHTML += `<div data-delete="${i}" class="roster-item">• ${saved}</div>`
+        deleteRoster.innerHTML += `<div data-delete="${saved}" class="roster-item">• ${saved}</div>`
     }
 
     deleteInterface.addEventListener("click", function(e) {
