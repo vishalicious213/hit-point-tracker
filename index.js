@@ -59,7 +59,7 @@ newCharForm.addEventListener("submit", function(e) {
     newMaxHpBtn.value = ""
 })
 
-// listen for clicks on the + - and 'remove' buttons
+// listen for clicks on the +, -, move and 'remove' buttons
 document.addEventListener("click", function(e) {
     if (e.target.dataset.addhp) {
         handleAddHp(e.target.dataset.addhp)
@@ -67,7 +67,11 @@ document.addEventListener("click", function(e) {
         handleSubHp(e.target.dataset.subhp)
     } else if (e.target.dataset.remove) {
         handleRemove(e.target.dataset.remove)
-    } 
+    } else if (e.target.dataset.moveleft) {
+        console.log("move left")
+    } else if (e.target.dataset.moveright) {
+        console.log("move right")
+    }
 })
 
 // toggle #save-interface-modal

@@ -158,6 +158,7 @@ h1 {
 .move-buttons {
     display: flex;
     align-items: baseline;
+    justify-content: center;
 }
 
 .move {
