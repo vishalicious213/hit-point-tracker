@@ -60,15 +60,15 @@ document.addEventListener("click", function(e) {
 })
 
 saveBtn.addEventListener("click", function() {
-    console.log("Save")
+    saveCharacters()
 })
 
 loadBtn.addEventListener("click", function() {
-    console.log("Load")
+    loadCharacters()
 })
 
 deleteBtn.addEventListener("click", function() {
-    console.log("Delete")
+    deleteCharacters()
 })
 
 // listen for hovering on the character card & buttons
@@ -172,6 +172,21 @@ function handleHoverExit(char, buttonType) {
         charDiv.classList.remove("rem-hover")
         charDiv.classList.add("char-hover")
     }
+}
+
+// save character roster to localStorage
+function saveCharacters() {
+    console.log("Save")
+}
+
+// load character roster from localStorage
+function loadCharacters() {
+    console.log("Load")
+}
+
+// delete character roster from localStorage
+function deleteCharacters() {
+    console.log("Delete")
 }
 
 // ⬇️ RENDER THE APP ⬇️
