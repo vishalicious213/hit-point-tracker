@@ -95,6 +95,8 @@ h1 {
     font-size: 1rem;
 }
 
+/* CHARACTERS ROSTER - HEALTH & BUTTONS */
+
 .health {
     width: 90%;
     font-size: 1.75rem;
@@ -151,8 +153,25 @@ h1 {
     border: 2px solid crimson;
 }
 
+/* CHARACTERS ROSTER - MOVE BUTTONS */
+
+.move-buttons {
+    display: flex;
+    align-items: baseline;
+}
+
+.move {
+    background-color: rgba(255, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 50%;
+    height: 1.35rem;
+    width: 1.5rem;
+    outline: 1px solid ivory;
+    margin: 0 .5rem;
+}
+
 .remove {
-    width: 90%;
+    /* width: 90%; */
     margin-top: 1rem;
     background-color: rgba(255, 0, 0, 0.3);
     color: gainsboro;

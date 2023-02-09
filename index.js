@@ -295,7 +295,11 @@ function renderCharacters(newChars) {
                         <button data-subhp="${char.name}" class="health-button sub-button" type="button">-</button>
                         <button data-addhp="${char.name}" class="health-button add-button" type="button">+</button>
                     </div>
-                    <button data-remove="${char.name}" class="remove" type="button">remove</button>
+                    <div class="move-buttons">
+                        <div class="move" title="Move left">⯇</div>
+                        <button data-remove="${char.name}" class="remove" type="button">remove</button>
+                        <div class="move" title="Move right">⯈</div>
+                    </div>
                 </div>
             </div>
         `
