@@ -315,15 +315,18 @@ h1 {
 }
 
 #save-btn {
-    color: red;
+    background-color: darkgreen;
+    color: ivory;
 }
 
 #load-btn {
-    color: blue;
+    background-color: saddlebrown;
+    color: ivory;
 }
 
 #delete-btn {
-    color: green;
+    background-color: darkslategray;
+    color: ivory;
 }
 
 /* SAVE-BUTTONS INTERFACES */
