@@ -65,8 +65,26 @@
             </div>
         </div>
 
-        <div id="save-interface" class="no-display">Save Interface</div>
+        <div id="save-interface" class="no-display">
+            <h2>Save this roster of characters</h2>
+            <!-- <label for="save-path">Enter a name for this roster of characters</label> -->
+            <input 
+                type="text" 
+                id="save-path" 
+                class=""
+                name="save-path"
+                placeholder="Name this save file"
+                required
+            >
+            <button id="save-submit-btn" type="button">
+                <div>
+                    <i class="fa-solid fa-floppy-disk"></i> Save
+                </div>
+            </button>
+        </div>
+
         <div id="load-interface" class="no-display">Load Interface</div>
+
         <div id="delete-interface" class="no-display">Delete Interface</div>
 
         <div id="form-controller">

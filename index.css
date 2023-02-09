@@ -196,7 +196,7 @@ h1 {
     border-radius: .5rem;
 }
 
-label {
+.form-field label {
     font-size: 1.35rem;
     font-weight: 600;
     color: gold;
@@ -221,7 +221,7 @@ label {
     margin: 1.25rem 0 .5rem
 }
 
-input {
+.form-field input {
     padding: .75rem .5rem;
     border-radius: .25rem;
     border: none;
@@ -233,12 +233,8 @@ input {
     color: white;
 }
 
-input::placeholder {
+.form-field input::placeholder {
     color: ivory;
-}
-
-input {
-    background-color: rgba(0, 25, 0, 0.2);
 }
 
 .hp-field {
