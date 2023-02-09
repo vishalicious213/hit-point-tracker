@@ -169,6 +169,9 @@ function handleMove(char, direction) {
 
     const characterIndex = charactersArray.indexOf(charToMove)
 
+    if (direction === "left" && characterIndex === 0) return
+    if (direction === "right" && characterIndex === charactersArray.length -1) return
+
     console.log(charToMove)
     console.log(characterIndex)
 }
