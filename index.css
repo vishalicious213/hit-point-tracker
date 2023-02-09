@@ -347,6 +347,9 @@ h1 {
 
 .interface-form h2 {
     font-size: 1.25rem;
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: .25rem 1rem;
 }
 
 .interface-border {
