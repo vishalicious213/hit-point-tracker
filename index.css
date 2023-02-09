@@ -372,6 +372,14 @@ h1 {
     background-color: rgba(255, 0, 0, 0.2);
 }
 
+#save-submit-btn {
+    background-color: darkgreen;
+    color: ivory;
+    border-radius: .25rem;
+    border: none;
+    padding: .25rem .5rem;
+}
+
 #roster, #delete-roster {
     background-color: rgba(255, 0, 0, 0.2);
     border-radius: .5rem;
