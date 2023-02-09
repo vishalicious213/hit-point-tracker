@@ -208,6 +208,18 @@ function loadCharacters() {
             // console.log(JSON.parse(localStorage.getItem(saved)))
         }
     })
+
+    // listen for clicks on the + - and 'remove' buttons
+    loadInterface.addEventListener("click", function(e) {
+        if (e.target.dataset.saved) {
+            let rosterIndex = (e.target.dataset.saved)
+            // console.log(rosterIndex)
+            console.log(JSON.parse(localStorage.getItem(localStorage.key(rosterIndex))))
+            // console.log(JSON.parse(localStorage.getItem(rosterIndex)))
+        }
+    })
+
+
 }
 
 // delete character roster from localStorage
