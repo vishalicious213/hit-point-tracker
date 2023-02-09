@@ -21,6 +21,9 @@ let charactersArray = []
 
 formToggle.addEventListener("click", function() {
     formContainer.classList.toggle("flex")
+    saveInterface.classList.remove("flex")
+    loadInterface.classList.remove("flex")
+    deleteInterface.classList.remove("flex")
 
     if (formToggle.textContent === "Show controls") {
         formToggle.textContent = "Hide controls"
