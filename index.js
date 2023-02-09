@@ -178,6 +178,8 @@ function handleMove(char, direction) {
 
     if (direction === "right") {
         console.log(char, direction)
+        const tempCharacter = charactersArray[characterIndex +1]
+        console.log(tempCharacter)
     }
 
     // console.log(charToMove)
