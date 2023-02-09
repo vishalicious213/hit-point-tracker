@@ -276,6 +276,7 @@ input {
 /* FORM CONTROLLER */
 
 #form-controller {
+    outline: 1px solid red;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -296,6 +297,12 @@ input {
     border: 1px solid ivory;
     border-radius: .5rem;
     /* width: 12rem; */
+}
+
+.save-buttons {
+    outline: 1px solid orange;
+    margin-left: .5rem;
+    padding: .5rem;
 }
 
 .save-buttons button {
