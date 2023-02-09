@@ -183,6 +183,9 @@ function handleMove(char, direction) {
         console.log(char, direction)
         const tempCharacter = charactersArray[characterIndex +1]
         console.log(tempCharacter)
+        charactersArray[characterIndex +1] = charToMove
+        charactersArray[characterIndex] = tempCharacter
+        renderCharacters(charactersArray)
     }
 
     // console.log(charToMove)
