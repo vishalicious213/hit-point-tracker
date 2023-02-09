@@ -5,6 +5,9 @@ const newCharForm = document.getElementById("add-char-form")
 const newNameBtn = document.getElementById("add-name")
 const newCurHpBtn = document.getElementById("add-current-hp")
 const newMaxHpBtn = document.getElementById("add-max-hp")
+const saveBtn = document.getElementById("save-btn")
+const loadBtn = document.getElementById("load-btn")
+const deleteBtn = document.getElementById("delete-btn")
 let charactersArray = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -53,7 +56,19 @@ document.addEventListener("click", function(e) {
         handleSubHp(e.target.dataset.subhp)
     } else if (e.target.dataset.remove) {
         handleRemove(e.target.dataset.remove)
-    }
+    } 
+})
+
+saveBtn.addEventListener("click", function() {
+    console.log("Save")
+})
+
+loadBtn.addEventListener("click", function() {
+    console.log("Load")
+})
+
+deleteBtn.addEventListener("click", function() {
+    console.log("Delete")
 })
 
 // listen for hovering on the character card & buttons

@@ -317,3 +317,15 @@ input {
 .save-buttons button:hover {
     transform: scale(1.1);
 }
+
+#save-btn {
+    color: red;
+}
+
+#load-btn {
+    color: blue;
+}
+
+#delete-btn {
+    color: green;
+}
