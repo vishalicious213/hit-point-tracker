@@ -370,8 +370,10 @@ h1 {
 .roster-item {
     padding-left: .5rem;
     margin-bottom: .25rem;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: .5rem;
 }
 
 .roster-item:hover {
-    color: gold;
+    border: 1px solid gold;
 }
