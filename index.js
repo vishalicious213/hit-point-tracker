@@ -9,6 +9,8 @@ const saveBtn = document.getElementById("save-btn")
 const loadBtn = document.getElementById("load-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const saveInterface = document.getElementById("save-interface")
+const loadInterface = document.getElementById("load-interface")
+const deleteInterface = document.getElementById("delete-interface")
 let charactersArray = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -177,19 +179,17 @@ function handleHoverExit(char, buttonType) {
 
 // save character roster to localStorage
 function saveCharacters() {
-    console.log("Save")
-
     saveInterface.classList.toggle("flex")
 }
 
 // load character roster from localStorage
 function loadCharacters() {
-    console.log("Load")
+    loadInterface.classList.toggle("flex")
 }
 
 // delete character roster from localStorage
 function deleteCharacters() {
-    console.log("Delete")
+    deleteInterface.classList.toggle("flex")
 }
 
 // ⬇️ RENDER THE APP ⬇️
