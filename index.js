@@ -185,6 +185,12 @@ function handleHoverExit(char, buttonType) {
 // save character roster to localStorage
 function saveCharacters() {
     saveInterface.classList.toggle("flex")
+
+    saveSubmitBtn.addEventListener("click", function() {
+        if (charactersArray.length > 0) {
+            localStorage.setItem(`${saveInput.value}`, JSON.stringify(charactersArray))
+        }
+    })
 }
 
 // load character roster from localStorage
