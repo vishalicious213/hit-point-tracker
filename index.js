@@ -12,6 +12,7 @@ const saveInterface = document.getElementById("save-interface-modal")
 const loadInterface = document.getElementById("load-interface-modal")
 const deleteInterface = document.getElementById("delete-interface-modal")
 const saveInput = document.getElementById("save-input")
+const saveMsg = document.getElementById("save-msg")
 const saveSubmitBtn = document.getElementById("save-submit-btn")
 const roster = document.getElementById("roster")
 const deleteRoster = document.getElementById("delete-roster")
@@ -196,9 +197,14 @@ function saveCharacters() {
     formToggle.textContent = "Show controls"
 
     saveSubmitBtn.addEventListener("click", function() {
-        if (charactersArray.length > 0) {
+        if (!saveInput.value && charactersArray.length > 0) {
+            saveMsg.textContent = "Enter a name for this group to save it"
+        }
+
+        if (charactersArray.length > 0 && saveInput.value) {
             localStorage.setItem(`${saveInput.value}`, JSON.stringify(charactersArray))
             saveInput.value = ""
+            saveMsg.textContent = ""
             saveInterface.classList.remove("flex")
         }
     })
