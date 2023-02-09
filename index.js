@@ -162,6 +162,12 @@ function handleRemove(char) {
 // move the character to the right/left in roster
 function handleMove(char, direction) {
     console.log(char, direction)
+
+    const charToMove = charactersArray.filter(function(ch) {
+        return ch.name === char
+    })[0]
+
+    console.log(charToMove)
 }
 
 // highlight the character's border on mouseover
