@@ -9,8 +9,10 @@ const saveBtn = document.getElementById("save-btn")
 const loadBtn = document.getElementById("load-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const saveInterface = document.getElementById("save-interface-modal")
-const loadInterface = document.getElementById("load-interface")
-const deleteInterface = document.getElementById("delete-interface")
+const loadInterface = document.getElementById("load-interface-modal")
+const deleteInterface = document.getElementById("delete-interface-modal")
+const saveInput = document.getElementById("save-input")
+const saveSubmitBtn = document.getElementById("save-submit-btn")
 let charactersArray = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -62,14 +64,17 @@ document.addEventListener("click", function(e) {
     } 
 })
 
+// toggle #save-interface-modal
 saveBtn.addEventListener("click", function() {
     saveCharacters()
 })
 
+// toggle #load-interface-modal
 loadBtn.addEventListener("click", function() {
     loadCharacters()
 })
 
+// toggle #delete-interface-modal
 deleteBtn.addEventListener("click", function() {
     deleteCharacters()
 })
