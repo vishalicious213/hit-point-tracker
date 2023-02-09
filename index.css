@@ -328,7 +328,9 @@ h1 {
 
 /* SAVE-BUTTONS INTERFACES */
 
-#save-interface-modal, #load-interface-modal {
+#save-interface-modal, 
+#load-interface-modal, 
+#delete-interface-modal {
     position: fixed;
     top: 0;
     left: 0;
