@@ -328,12 +328,7 @@ h1 {
 
 /* SAVE-BUTTONS INTERFACES */
 
-.save-buttons-interface-container {
-    outline: 1px solid red;
-    width: 20rem;
-}
-
-#save-interface {
+#save-interface-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -343,4 +338,24 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 0, 0, 0.2);
+}
+
+#save-interface-modal h2 {
+    font-size: 1.25rem;
+}
+
+.save-interface-border {
+    background-image: url("/img/wood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1rem;
+    border-radius: .5rem;
+}
+
+.save-interface-form {
+    width: 260px;
+    padding: 1rem;
+    border: 2px solid brown;
+    border-radius: .5rem;
 }
