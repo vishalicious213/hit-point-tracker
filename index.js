@@ -187,6 +187,8 @@ function handleHoverExit(char, buttonType) {
 // save character roster to localStorage
 function saveCharacters() {
     saveInterface.classList.toggle("flex")
+    loadInterface.classList.remove("flex")
+    deleteInterface.classList.remove("flex")
 
     saveSubmitBtn.addEventListener("click", function() {
         if (charactersArray.length > 0) {
@@ -199,6 +201,9 @@ function saveCharacters() {
 // load character roster from localStorage
 function loadCharacters() {
     loadInterface.classList.toggle("flex")
+    saveInterface.classList.remove("flex")
+    deleteInterface.classList.remove("flex")
+
     roster.innerHTML = ""
 
     for (let i = 0; i < localStorage.length; i++) {
@@ -220,6 +225,9 @@ function loadCharacters() {
 // delete character roster from localStorage
 function deleteCharacters() {
     deleteInterface.classList.toggle("flex")
+    saveInterface.classList.remove("flex")
+    loadInterface.classList.remove("flex")
+
     
     function renderRoster() {
         deleteRoster.innerHTML = ""
