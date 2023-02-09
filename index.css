@@ -350,6 +350,7 @@ h1 {
     color: gold;
     background-color: rgba(0, 0, 0, 0.2);
     padding: .25rem 1rem;
+    border-radius: .25rem;
 }
 
 .interface-border {
