@@ -193,6 +193,7 @@ function saveCharacters() {
     loadInterface.classList.remove("flex")
     deleteInterface.classList.remove("flex")
     formContainer.classList.remove("flex")
+    formToggle.textContent = "Show controls"
 
     saveSubmitBtn.addEventListener("click", function() {
         if (charactersArray.length > 0) {
@@ -208,6 +209,7 @@ function loadCharacters() {
     saveInterface.classList.remove("flex")
     deleteInterface.classList.remove("flex")
     formContainer.classList.remove("flex")
+    formToggle.textContent = "Show controls"
 
     roster.innerHTML = ""
 
@@ -237,6 +239,7 @@ function deleteCharacters() {
     saveInterface.classList.remove("flex")
     loadInterface.classList.remove("flex")
     formContainer.classList.remove("flex")
+    formToggle.textContent = "Show controls"
 
     function renderRoster() {
         deleteRoster.innerHTML = ""
