@@ -167,7 +167,10 @@ function handleMove(char, direction) {
         return ch.name === char
     })[0]
 
+    const characterIndex = charactersArray.indexOf(charToMove)
+
     console.log(charToMove)
+    console.log(characterIndex)
 }
 
 // highlight the character's border on mouseover
