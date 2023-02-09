@@ -198,7 +198,7 @@ function saveCharacters() {
 
     saveSubmitBtn.addEventListener("click", function() {
         if (!saveInput.value && charactersArray.length > 0) {
-            saveMsg.textContent = "Enter a name for this group to save it"
+            saveMsg.textContent = "Enter a name for this group to save it!"
         }
 
         if (charactersArray.length > 0 && saveInput.value) {
