@@ -199,11 +199,13 @@ function saveCharacters() {
 // load character roster from localStorage
 function loadCharacters() {
     loadInterface.classList.toggle("flex")
-
+    
     loadSubmitBtn.addEventListener("click", function() {
+        roster.innerHTML = ""
         for (let i = 0; i < localStorage.length; i++) {
             let saved = localStorage.key(i)
-            console.log(JSON.parse(localStorage.getItem(saved)))
+            roster.innerHTML += `<div data-saved="${i}" class="roster-item">${saved}</div>`
+            // console.log(JSON.parse(localStorage.getItem(saved)))
         }
     })
 }
