@@ -199,29 +199,21 @@ function saveCharacters() {
 // load character roster from localStorage
 function loadCharacters() {
     loadInterface.classList.toggle("flex")
-    
-    // loadSubmitBtn.addEventListener("click", function() {
-        roster.innerHTML = ""
-        for (let i = 0; i < localStorage.length; i++) {
-            let saved = localStorage.key(i)
-            roster.innerHTML += `<div data-saved="${i}" class="roster-item">• ${saved}</div>`
-            // console.log(JSON.parse(localStorage.getItem(saved)))
-        }
-    // })
+    roster.innerHTML = ""
 
-    // listen for clicks on the + - and 'remove' buttons
+    for (let i = 0; i < localStorage.length; i++) {
+        let saved = localStorage.key(i)
+        roster.innerHTML += `<div data-saved="${i}" class="roster-item">• ${saved}</div>`
+    }
+
+    // listen for clicks on roster items & render clicked roster
     loadInterface.addEventListener("click", function(e) {
         if (e.target.dataset.saved) {
             let rosterIndex = (e.target.dataset.saved)
             let loadedRoster = JSON.parse(localStorage.getItem(localStorage.key(rosterIndex)))
             renderCharacters(loadedRoster)
-            // console.log(rosterIndex)
-            // console.log(JSON.parse(localStorage.getItem(localStorage.key(rosterIndex))))
-            // console.log(JSON.parse(localStorage.getItem(rosterIndex)))
         }
     })
-
-
 }
 
 // delete character roster from localStorage
