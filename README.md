@@ -60,17 +60,33 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 
 ## CSS concepts
 
-- background-image: url()
-- background-repeat: no-repeat
-- background-size: cover
-- background-position: center
-- background-color: rgba values
-- text-align
-- Flexbox
+- background styles
+    - background-image: url()
+    - background-repeat: no-repeat
+    - background-size: cover
+    - background-position: center
+    - background-color: rgba values
+- CSS Flexbox
     - display: flex
     - flex-wrap: wrap
     - justify-content: center
+    - justify-content: space-between
     - align-items: center
+    - align-items: baseline
     - flex-direction: column
+- box-sizing: border-box
 - display: none
+- outline: none
+- position: fixed
+    - top
+    - left
+    - bottom
+    - right
+- text-align
+- text-decoration
+- text-shadow
 - transition: .1s
+- transform: scale()
+- ::-webkit-outer-spin-button,
+- ::-webkit-inner-spin-button
+    - -webkit-appearance: none;
