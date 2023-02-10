@@ -171,25 +171,18 @@ function handleMove(char, direction) {
     if (direction === "right" && characterIndex === charactersArray.length -1) return
 
     if (direction === "left") {
-        console.log(char, direction)
         const tempCharacter = charactersArray[characterIndex -1]
-        console.log(tempCharacter)
         charactersArray[characterIndex -1] = charToMove
         charactersArray[characterIndex] = tempCharacter
         renderCharacters(charactersArray)
     }
 
     if (direction === "right") {
-        console.log(char, direction)
         const tempCharacter = charactersArray[characterIndex +1]
-        console.log(tempCharacter)
         charactersArray[characterIndex +1] = charToMove
         charactersArray[characterIndex] = tempCharacter
         renderCharacters(charactersArray)
     }
-
-    // console.log(charToMove)
-    // console.log(characterIndex)
 }
 
 // highlight the character's border on mouseover
