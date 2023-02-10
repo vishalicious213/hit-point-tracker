@@ -7,3 +7,7 @@ The three buttons below the health bar allow a character's position to be moved 
 Icons on the bottom-left of the screen allow character parties to be saved to localStorage (a name must be provided). These parties can later be loaded or deleted from localStorage. The modals that house the controls for these functions close other open modals, so that only one can be active at a time. They also prevent interactions with the interface below the modal's layer, so that the party can't be adjusted while a modal is open.
 
 Deployed at: https://vish213-hp-tracker.netlify.app/
+
+![](https://github.com/vishalicious213/hit-point-tracker/blob/main/img/hp-tracker.jpg)
+
+## JavaScript concepts
