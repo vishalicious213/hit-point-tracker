@@ -16,6 +16,7 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 - arrays
     - array indices
     - .filter()
+    - .forEach()
     - .indexOf()
     - .length()
     - .push()
@@ -25,6 +26,7 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 - conditionals
     - if statements
     - if..else statements
+- for loops
 - NOT operator (!)
 - AND operator (&&)
 - string/template literals
@@ -42,13 +44,15 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
     .add()
     .remove()
     .toggle()
+- element.innerHTML
+- element.target
 - element.textContent
 - element.value
-- element.target
     - .dataset
 - localStorage
     - .getItem()
     - .setItem()
+    - .key()
 - JSON.parse()
 - JSON.stringify()
 - parseInt()
