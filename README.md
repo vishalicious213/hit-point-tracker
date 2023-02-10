@@ -57,3 +57,20 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 - JSON.stringify()
 - parseInt()
 - return
+
+## CSS concepts
+
+- background-image: url()
+- background-repeat: no-repeat
+- background-size: cover
+- background-position: center
+- background-color: rgba values
+- text-align
+- Flexbox
+    - display: flex
+    - flex-wrap: wrap
+    - justify-content: center
+    - align-items: center
+    - flex-direction: column
+- display: none
+- transition: .1s
