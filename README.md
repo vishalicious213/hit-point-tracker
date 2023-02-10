@@ -90,3 +90,25 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 - ::-webkit-outer-spin-button,
 - ::-webkit-inner-spin-button
     - -webkit-appearance: none;
+
+
+## HTML concepts
+
+- importing the Font Awesome CDN
+    - Font Awesome i-tags
+- Semantic HTML
+    - header
+    - main
+    - section
+- element IDs
+- element classes
+- forms
+    - labels
+    - inputs
+        - type="text"
+        - type="number"
+        - required
+    - buttons
+        - type="button"
+        - type="submit"
+- modals
