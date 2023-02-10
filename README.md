@@ -102,6 +102,11 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
     - section
 - element IDs
 - element classes
+- data attributes
+- meters
+    - value=""
+    - min=""
+    - max=""
 - forms
     - labels
     - inputs
