@@ -11,3 +11,20 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 ![](https://github.com/vishalicious213/hit-point-tracker/blob/main/img/hp-tracker.jpg)
 
 ## JavaScript concepts
+
+- variables
+- arrays
+- functions
+- conditionals
+    - if statements
+    - if..else statements
+- event listeners
+    - addEventListener()
+        - "click"
+        - "submit"
+- getElementById()
+- element.classList
+    .toggle()
+    .remove()
+    .add()
+- element.textContent
