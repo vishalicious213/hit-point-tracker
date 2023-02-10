@@ -14,17 +14,42 @@ Deployed at: https://vish213-hp-tracker.netlify.app/
 
 - variables
 - arrays
+    - array indices
+    - .filter()
+    - .indexOf()
+    - .length()
+    - .push()
+    - .splice()
+- objects
 - functions
 - conditionals
     - if statements
     - if..else statements
+- NOT operator (!)
+- AND operator (&&)
+- string/template literals
 - event listeners
     - addEventListener()
         - "click"
         - "submit"
-- getElementById()
+        - "mouseover"
+        - "mouseout"
+    - preventDefault()
+- document.getElementById()
+- document.querySelector()
+    - selecting via data attribute
 - element.classList
-    .toggle()
-    .remove()
     .add()
+    .remove()
+    .toggle()
 - element.textContent
+- element.value
+- element.target
+    - .dataset
+- localStorage
+    - .getItem()
+    - .setItem()
+- JSON.parse()
+- JSON.stringify()
+- parseInt()
+- return
